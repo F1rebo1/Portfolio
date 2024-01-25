@@ -20,11 +20,18 @@ if(navClose){
 }
 
 
-/* REMOVE MENU MOBILE*/
+/* HIDE MENU ON BUTTON CLICK MOBILE*/
+const navLink = document.querySelectorAll('.nav_link');
 
+function linkAction(){
+    // const navMenu = document.getElementById('nav-menu');
+    navMenu.classList.remove('show-menu')
+}
+navLink.forEach(n => n.addEventListener('click', linkAction));
+//We iterate through each clickable link within the menu, and if clicked then hide the
+//menu
 
-
-/*ACCORDION SKILLS*/
+/* ACCORDION SKILLS */
 
 
 
