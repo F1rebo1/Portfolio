@@ -377,6 +377,142 @@ img{
 }
 
 /* SKILLS */
+.skills_container{
+    row-gap: 0;
+}
+
+.skills_header{
+    display: flex;
+    align-items: center;
+    margin-bottom: var(--mb-2-5);
+    cursor: pointer;
+}
+
+.skills_icon,.skills_arrow{
+    font-size: 2rem;
+    color: var(--first-color);
+}
+
+.skills_icon{
+    margin-right: var(--mb-0-75);
+}
+
+.skills_title{
+    font-size: var(--h3-font-size);
+}
+
+.skills_subtitle{
+    font-size: var(--small-font-size);
+    color: var(--text-color-light);
+}
+
+.skills_arrow{
+    margin-left: auto;
+    transition: .4s;
+}
+
+.skills_list{
+    row-gap: 1.5rem;
+    padding-left: 2.7rem;
+    /* margin-bottom: 1rem; */
+}
+
+.skills_titles{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: var(--mb-0-5);
+}
+
+.skills_icon:hover,.skills_arrow:hover{
+    color: var(--first-color-alt);
+}
+
+.skills_name{
+    font-size: var(--normal-font-size);
+    font-weight: var(--font-medium);
+}
+
+.skills_bar,.skills_percentage{
+    height: 5px;
+    border-radius: .25rem;
+}
+
+.skills_bar{
+    background-color: var(--first-color-lighter);
+}
+
+.skills_percentage{
+    display: block;
+    background-color: var(--first-color);
+}
+
+.skills_close .skills_list{
+    height: 0;
+    overflow: hidden;
+}
+
+.skills_open .skills_list{
+    height: max-content;
+    margin-bottom: var(--mb-2-5);
+}
+
+.skills_open .skills_arrow{
+    transform: rotate(-180deg);
+}
+
+/* Programming & Version Control Skills */
+
+.skills_java{
+    width: 80%;
+}
+
+.skills_python{
+    width: 70%;
+}
+
+/* .skills_cpp{
+    width: 65%;
+} */
+
+.skills_git{
+    width: 80%;
+}
+
+/* Frontend Development Skills */
+
+.skills_html{
+    width: 85%;
+}
+
+.skills_css{
+    width: 85%;
+}
+
+.skills_reactnode{
+    width: 70%;
+}
+
+.skills_javascript{
+    width: 70%;
+}
+
+/* Backend Development Skills */
+
+.skills_postgresql{
+    width: 70%;
+}
+
+.skills_restapi{
+    width: 75%;
+}
+
+.skills_nosql{
+    width: 70%;
+}
+
+.skills_elasticsearch{
+    width: 75%;
+}
 
 /* QUALIFICATION */
 

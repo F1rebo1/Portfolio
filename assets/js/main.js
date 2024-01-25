@@ -33,6 +33,25 @@ navLink.forEach(n => n.addEventListener('click', linkAction));
 
 /* ACCORDION SKILLS */
 
+const skillsContent = document.getElementsByClassName('skills_content'),
+      skillsHeader = document.querySelectorAll('.skills_header');
 
+function toggleSkills(){
+    let itemClass = this.parentNode.className
+    //itemClass tracks the classes of the currently clicked element. We then close
+    //every skill list in the for loop below, and then based on itemClass's classes
+    //we open the clicked list if itemClass was originally closed.
+
+    for(i = 0; i < skillsContent.length; i++){
+        skillsContent[i].className = 'skills_content skills_close';
+    }
+    if(itemClass === 'skills_content skills_close'){
+        this.parentNode.className = 'skills_content skills_open'
+    }
+}
+
+skillsHeader.forEach((el) => {
+    el.addEventListener('click',toggleSkills);
+})
 
 /* QUALIFICATION TABS*/
