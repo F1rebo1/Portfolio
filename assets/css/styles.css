@@ -339,7 +339,6 @@ img{
 /* ABOUT */
 .about_img{
     width: 200px;
-    /* width: max-content; */
     border-radius: .5rem;
     justify-self: center;
     align-self: center;
@@ -512,6 +511,20 @@ img{
 
 .skills_elasticsearch{
     width: 75%;
+}
+
+/* Development Methodologies & Tools */
+
+.skills_agile{
+    width: 90%;
+}
+
+.skills_confluence{
+    width: 85%;
+}
+
+.skills_jira{
+    width: 85%;
 }
 
 /* QUALIFICATION */
