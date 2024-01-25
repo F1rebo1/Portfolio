@@ -7,7 +7,7 @@
 
     /* Colors */
     /* --hue-color: 250; */
-    --hue-color: 44;
+    --hue-color: 15;
 
     /* HSL Color mode */
     --first-color: hsl(var(--hue-color), 69%, 61%);
@@ -257,11 +257,17 @@ img{
 
 .home_blob{
     width: 200px;
-    fill:var(--first-color);
+    fill: var(--first-color);
 }
 
 .home_blob-img{
-    width: 170px;
+    /* width: 100%;
+    height: auto; */
+    width: 120px;
+}
+
+.home_data{
+    grid-column: 1/3;
 }
 
 /* BUTTONS */
