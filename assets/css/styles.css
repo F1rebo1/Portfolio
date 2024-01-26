@@ -560,6 +560,45 @@ img{
     font-weight: var(--font-medium);
 }
 
+.qualification_subtitle{
+    display: inline-block;
+    font-size: var(--small-font-size);
+    margin-bottom: var(--mb-1);
+}
+
+.qualification_calendar,.qualification_location{
+    font-size: var(--smaller-font-size);
+    color: var(--text-color-light);
+}
+
+.qualification_rounder{
+    display: inline-block;
+    width: 13px;
+    height: 13px;
+    background-color: var(--first-color);
+    border-radius: 50%;
+}
+
+.qualification_line{
+    display: block;
+    width: 1px;
+    height: 100%;
+    background-color: var(--first-color);
+    transform: translate(6px, -7px);
+}
+
+.qualification [data-content]{
+    display: none;
+}
+
+.qualification_active[data-content]{
+    display: block;
+}
+
+.qualification_button.qualification_active{
+    color: var(--first-color);
+}
+
 /* PROJECTS */
 
 /* Active Modal */
