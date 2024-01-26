@@ -528,6 +528,19 @@ img{
 }
 
 /* QUALIFICATION */
+.qualification_tabs{
+    display: flex;
+    justify-content: space-evenly;
+    margin-bottom: var(--mb-2);
+}
+
+.qualification_button{
+    font-size: var(--h3-font-size);
+    font-weight: var(--font-medium);
+    cursor: pointer;
+}
+
+
 
 /* PROJECTS */
 
