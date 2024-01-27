@@ -90,3 +90,71 @@ let swiper = new Swiper(".portfolio_container", {
     mousewheel: true,
     keyboard: true,
   });
+
+/* SCROLL SECTIONS ACTIVE LINK */
+// const sections = document.querySelectorAll('section[id]')
+
+// function scrollActive(){
+//     const scrollY = window.pageYOffset;
+
+//     sections.forEach(current => {
+//         const sectionHeight = current.offsetHeight;
+//         const sectionTop = current.offsetTop - 50;
+//         sectionId = current.getAttribute('id');
+
+//         if(scrollY > sectionTop && scrollY <= sectionTop + sectionHeight){
+//             document.querySelector('.nav_menu a[href=' + sectionId + ']').classList.add('active-link')
+//         }else{
+//             document.querySelector('.nav_menu a[href=' + sectionId + ']').classList.remove('active-link')
+//         }
+//     })
+// }
+// window.addEventListener('scroll',scrollActive)
+
+/* CHANGE BACKGROUND HEADER */
+function scrollHeader(){
+    const nav = document.getElementById('header');
+
+    if(this.scrollY >= 200) navClose.classList.add('scroll-header');
+    else nav.classList.remove('scroll-header');
+}
+window.addEventListener('scroll',scrollHeader);
+
+/* SHOW SCOLL UP */
+function scrollUp(){
+    const scrollUp = document.getElementById('scroll-up');
+
+    if(this.scrollY >= 560) scrollUp.classList.add('show-scroll');
+    else scrollUp.classList.remove('show-scroll');
+}
+window.addEventListener('scroll',scrollUp);
+
+/* DARK AND LIGHT THEME */
+const themeButton = document.getElementById('theme-button');
+const darkTheme = 'dark-theme';
+const iconTheme = 'uil-sun';
+
+// Previously selected topic (if user selected)
+const selectedTheme = localStorage.getItem('selected-theme');
+const selectedIcon = localStorage.getItem('selected-icon');
+
+// Get the current theme by checking for current classnames within body
+const getCurrentTheme = () => document.body.classList.contains(darkTheme) ? 'dark' : 'light';
+const getCurrentIcon = () => themeButton.classList.contains(iconTheme) ? 'uil-moon' : 'uil-sun';
+
+// Validate if the user chose a topic
+if(selectedTheme){
+    // If validated, we ask what the issue was to know if we activated it
+    document.body.classList[selectedTheme === 'dark' ? 'add' : 'remove'](darkTheme);
+    themeButton.classList[selectedIcon === 'uil-moon' ? 'add' : 'remove'](iconTheme);
+}
+
+// Activate/deactivate the theme manually with the button
+themeButton.addEventListener('click', () => {
+    // Add or remove the dark/icon theme
+    document.body.classList.toggle(darkTheme);  //.toggle(i) adds i if not present,
+    themeButton.classList.toggle(iconTheme);    //or removes it if present
+    // Save the theme and the current icon chosen by the user
+    localStorage.setItem('selected-theme', getCurrentTheme());
+    localStorage.setItem('selected-icon', getCurrentIcon());
+})
